@@ -76,12 +76,11 @@
 
     /**
      * Number and directions layer (L2)
-     *  &none &none        &none    &kp UP   &none     &none          &kp ASTRK  &kp N7 &kp N8 &kp N9 &kp MINUS &none
      */
     layer_2 {
       label = "LOWER";
       bindings = <
-        &none &kp RC(N1) &kp RC(N2)  &kp RC(N3)  &kp RC(N4)  &kp RC(N5)  &kp RC(N6)   &kp RC(N7) &kp RC(N8)    &kp RC(N9)  &kp RC(N0)    &none
+        &none &kp LC(N1) &kp LC(N2)  &kp LC(N3)  &kp LC(N4)  &kp LC(N5)  &kp LC(N6)   &kp LC(N7) &kp LC(N8)    &kp LC(N9)  &kp LC(N0)    &none
         &none &kp LG(N1) &kp LG(N2)  &kp LG(N3)  &kp LG(N4)  &kp LG(N5)  &kp LG(N6)   &kp LG(N7) &kp LG(N8)    &kp LG(N9)  &kp LG(N0)    &none
         &none &none        &none    &none    &none     &none          &kp N0     &kp N1 &kp N2 &kp N3 &kp DOT   &none
                                     &to L0   &kp BSPC  &kp LSHFT      &kp SPACE  &to L2 &none
