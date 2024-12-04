@@ -57,7 +57,7 @@
         &none &kp Q     &kp W       &kp E       &kp R        &kp T       &kp Y      &kp U        &kp I       &kp O       &kp P     &none
         &none &kp A     &kp S       &kp D       &kp F        &kp G       &kp H      &kp J        &kp K       &kp L       &kp RET   &none
         &none &kp Z     &kp X       &kp C       &kp V        &kp B       &kp N      &kp M        &kp COMMA   &kp DOT     &kp SLASH &none
-                                    &kp ESC     &kp LCMD     &mo L1      &mo L2     &kp SPACE    &sl L3
+                                    &kp ESC     &mo L3       &mo L1      &mo L2     &kp SPACE    &sl L3
       >;
     };
 
@@ -88,14 +88,14 @@
     };
 
     /**
-     * Controls layer that contains OS controls (bluetooth, mute, play, etc.) (L3)
+     * Controls homerow mod (L3)
      */
     layer_3 {
-      label = "SYSTEM";
+      label = "HOMEROW";
       bindings = <
-        &none &kp LC(LG(Q)) &none &none         &none          &kp PG_UP  &kp C_VOL_UP &kp C_PLAY &kp C_PREV &kp C_NEXT &none      &none
-        &none &none         &none &kp LG(LS(X)) &kp LG(LS(N4)) &kp PG_DN  &kp C_VOL_DN &kp LC(N1) &kp LC(N2) &kp LC(N3) &kp LC(N4) &none
-        &none &none         &none &none         &none          &none      &kp C_MUTE   &none      &bt BT_PRV &bt BT_NXT &bt BT_CLR &none
+        &none &kp Q &kp W       &kp E       &kp R        &kp T       &kp Y &kp U        &kp I       &kp O       &kp P     &none
+        &none &kp A &lhr LALT S &lhr LCMD D &lhr LCTRL F &kp G       &kp H &rhr LCTRL J &rhr LCMD K &rhr LALT L &kp SEMI  &none
+        &none &kp Z &kp X       &kp C       &kp V        &kp B       &kp N &kp M        &kp COMMA   &kp DOT     &kp SLASH &none
                             &none &kp BSPC      &kp LSHFT      &kp SPACE  &to L0       &none
       >;
     };
