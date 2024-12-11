@@ -13,6 +13,12 @@
 
 / { 
   behaviors {
+    &sk {
+      release-after-ms = <2000>;
+      quick-release;
+      /delete-property/ ignore-modifiers;
+    };
+
     /**
      * Left hand positional hold tap, used for home block modifiers
      */
@@ -58,7 +64,7 @@
         &none &kp Q     &kp W       &kp E       &kp R        &kp T       &kp Y      &kp U        &kp I       &kp O       &kp P     &none
         &none &kp A     &kp S       &kp D       &kp F        &kp G       &kp H      &kp J        &kp K       &kp L       &kp RET   &none
         &none &kp Z     &kp X       &kp C       &kp V        &kp B       &kp N      &kp M        &kp COMMA   &kp DOT     &kp FSLH  &none
-                                    &lhr LSHIFT CAPS &mo L3       &mo L1      &lt L2 SPACE &mo L4       &sl L3
+                                    &lhr LSHIFT CAPS &mo L3       &mo L1      &lt L2 SPACE &mo L4 &sk LSHFT
       >;
     };
 
@@ -81,7 +87,7 @@
     layer_2 {
       label = "LOWER";
       bindings = <
-        &none &kp LC(N1) &kp LC(N2)  &kp LC(N3)  &kp LC(N4)  &kp LC(N5)  &kp LC(N6)   &kp LC(N7) &kp LC(N8)    &kp LC(N9)  &kp LC(N0)    &none
+        &none &kp LC(N1) &kp LC(N2)  &kp LC(N3)  &kp LC(N4)  &kp LC(N5)  &kp LC(N6)   &kp LC(N7) &kp LC(N8)    &kp LC(N9)  &kp ESC &none
         &none &kp LG(N1) &kp LALT  &kp LCMD  &kp LCTRL  &kp LG(N5)  &kp LEFT &kp DOWN &kp UP  &kp RIGHT  &kp LG(N0)    &none
         &none &none        &none    &none    &none     &none          &kp N0     &kp C_MUTE &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp DOT   &none
                                     &kp LSHIFT  &mo L3     &mo L1      &kp SPACE &mo L4       &sl L3
@@ -107,7 +113,7 @@
     layer_4 {
       label = "HOMEROW";
       bindings = <
-        &none &kp Q &kp W  &kp E  &kp R  &kp T        &kp Y &kp U        &kp I       &kp O       &kp ESC     &none
+        &none &kp Q &kp W  &kp E  &kp R  &kp T        &kp Y &kp U        &kp I       &kp O       &kp LBKT   &none
         &none &kp A &kp S  &kp D  &kp F  &kp G        &kp RBKT &kp LCTRL &kp LCMD  &kp LALT  &kp RET  &none
         &none &kp Z &kp X  &kp C  &kp V  &kp B        &kp N &kp M &kp COMMA   &kp DOT  &kp LSHFT &none
                             &none &kp BSPC      &kp LSHFT      &kp SPACE  &to L0       &none
