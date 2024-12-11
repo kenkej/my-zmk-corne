@@ -13,12 +13,6 @@
 
 / { 
   behaviors {
-    &sk {
-      release-after-ms = <2000>;
-      quick-release;
-      /delete-property/ ignore-modifiers;
-    };
-
     /**
      * Left hand positional hold tap, used for home block modifiers
      */
@@ -51,6 +45,12 @@
         hold-trigger-on-release;
     };
   };
+
+  &sk {
+      release-after-ms = <2000>;
+      quick-release;
+      /delete-property/ ignore-modifiers;
+    };
 
   keymap {
     compatible = "zmk,keymap";
