@@ -15,7 +15,7 @@
 
   &soft_off {
       hold-time-ms = <5000>;
-      split-peripheral-off-on-press;
+      both-sides-off;
   };
 
 / { 
