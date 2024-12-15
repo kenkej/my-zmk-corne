@@ -18,7 +18,7 @@
      soft_off_both: soft_off_both {
        compatible = "zmk,behavior-soft-off";
        #binding-cells = <0>;
-       hold-time-ms = <5000>;
+       hold-time-ms = <3000>;
      };
         
     lt_ss: layer_tap_sticky_shift {
