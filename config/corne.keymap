@@ -15,7 +15,6 @@
 
   &soft_off {
       hold-time-ms = <5000>;
-      both-sides-off;
   };
 
 / { 
