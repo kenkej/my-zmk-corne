@@ -3,9 +3,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
-
 #define L0 0
 #define L1 1
 #define L2 2
@@ -84,7 +81,7 @@
         &none &kp Q     &kp W       &kp E       &kp R        &kp T       &kp Y      &kp U        &kp I       &kp O       &kp P     &none
         &none &kp A     &kp S       &kp D       &kp F        &kp G       &kp H      &kp J        &kp K       &kp L       &lt L5 RET   &none
         &none &kp Z     &kp X       &kp C       &kp V        &kp B       &kp N      &kp M        &kp COMMA   &kp DOT     &kp FSLH  &none
-                                    &lhr LSHFT CAPS    &mo L3       &lt_ss L1 LSHIFT  &lt L2 SPACE &mo L4 &kp LSHFT
+                                    &lhr LSHFT CAPS    &mo L3       &lt_ss L1 LSHIFT  &lt L2 SPACE &mo L4  &soft_off
       >;
     };
 
