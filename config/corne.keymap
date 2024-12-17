@@ -105,7 +105,7 @@
       bindings = <
         &none &kp GRAVE &kp LC(N2)  &kp LC(N3)  &kp LC(N4)  &kp LC(N5)  &kp LC(N6)   &kp LC(N7) &kp LC(N8)    &kp LC(N9)  &kp ESC &none
         &none &kp TAB &kp LALT  &kp LCMD  &kp LCTRL  &kp LG(N5)  &kp LEFT &kp DOWN &kp UP  &kp RIGHT  &kp LG(N0)    &none
-        &none &kp LSHIFT  &none    &kp C    &bt BT_SEL 0   &bt BT_SEL 1   &tog 6   &kp C_MUTE &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp LSHIFT  &none
+        &none &kp LSHIFT  &none    &kp C    &bt BT_SEL 0   &bt BT_SEL 1   &to L6   &kp C_MUTE &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp LSHIFT  &none
                                     &kp CAPS  &mo L3     &mo L1      &kp SPACE &mo L4       &sl L3
       >;
     };
@@ -155,7 +155,7 @@
         &none &kp TAB     &kp Q       &kp W       &kp E        &kp R       &kp Y      &kp U        &kp I       &kp O       &kp P     &none
         &none &kp LSHIFT  &kp A       &kp S       &kp D        &kp F       &kp H      &kp J        &kp K       &kp L       &lt L5 RET   &none
         &none &kp LCTRL   &kp Z       &kp X       &kp C        &kp V       &kp N      &kp M        &kp COMMA   &kp DOT     &kp FSLH  &none
-                                      &kp G       &kp Y        &kp T       &lt L2 SPACE &mo L4     &tog 0
+                                      &kp G       &kp Y        &kp T       &lt L2 SPACE &mo L4     &to L0
       >;
     };
   };
