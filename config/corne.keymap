@@ -90,8 +90,8 @@
       label = "RAISE";
       bindings = <
         &none &kp N1   &kp N2    &kp N3    &kp N4     &kp N5     &kp N6    &kp N7    &kp N8    &kp N9            &kp N0    &none
-        &none &kp TAB  &kp LALT  &kp LCMD  &kp LCTRL  &kp LPAR   &kp BSPC  &kp SEMI  &kp SQT   &kp BSLH      &kp EQUAL &none
-        &none &kp LSHIFT &kp TILDE &kp CARET &kp GRAVE  &kp LBRC   &kp RBRC  &kp EQUAL &kp TAB   &kp LG(LC(SPACE)) &kp FSLH  &none
+        &none &kp TAB  &kp LALT  &kp LCMD  &kp LCTRL  &kp DEL   &kp BSPC  &kp SEMI  &kp SQT   &kp BSLH      &kp EQUAL &none
+        &none &kp LSHIFT &kp K_CUT &kp K_COPY &kp K_PASTE  &kp LBKT &kp RBKT  &kp EQUAL &kp TAB   &kp LG(LC(SPACE)) &kp FSLH  &none
                                  &none     &mo L3     &none      &kp MINUS &mo L4    &sl L3
       >;
     };
@@ -104,7 +104,7 @@
       bindings = <
         &none &kp GRAVE &kp LC(N2)  &kp LC(N3)  &kp LC(N4)  &kp LC(N5)  &kp LC(N6)   &kp LC(N7) &kp LC(N8)    &kp LC(N9)  &kp ESC &none
         &none &kp TAB &kp LALT  &kp LCMD  &kp LCTRL  &kp LG(N5)  &kp LEFT &kp DOWN &kp UP  &kp RIGHT  &kp LG(N0)    &none
-        &none &none        &none    &kp C    &bt BT_SEL 0   &bt BT_SEL 1   &kp N     &kp C_MUTE &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp DOT   &none
+        &none &kp LSHIFT  &none    &kp C    &bt BT_SEL 0   &bt BT_SEL 1   &kp N     &kp C_MUTE &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp LSHIFT  &none
                                     &kp CAPS  &mo L3     &mo L1      &kp SPACE &mo L4       &sl L3
       >;
     };
