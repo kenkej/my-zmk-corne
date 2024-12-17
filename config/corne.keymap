@@ -154,7 +154,7 @@
       bindings = <
         &none &kp TAB     &kp Q       &kp W       &kp E        &kp R       &kp Y      &kp U        &kp I       &kp O       &kp P     &none
         &none &kp LSHIFT  &kp A       &kp S       &kp D        &kp F       &kp H      &kp J        &kp K       &kp L       &lt L5 RET   &none
-        &none &kp LCTRL   &kp Z       &kp X       &kp C        &kp V       &kp N      &kp M        &kp COMMA   &kp DOT     &kp FSLH  &none
+        &none &kp LCTRL   &kp Z       &kp X       &kp C        &kp V       &none      &kp M        &kp COMMA   &kp DOT     &kp FSLH  &none
                                       &kp G       &kp Y        &kp T       &lt L2 SPACE &mo L4  &soft_off_both
       >;
     };
