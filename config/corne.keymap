@@ -66,7 +66,23 @@
         hold-trigger-key-positions = <KEYS_L>;
         hold-trigger-on-release;
     };
+
+    l6_toggle: layer_6_toggle {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&macro_tap &to 0>;
+        label = "LAYER_6_TOGGLE";
+    };
   };
+
+   conditional_layers {
+        compatible = "zmk,conditional-layers";
+        layer_6_off {
+            if-layers = <6>;
+            then-layer = <0>;
+        };
+    };
+};
 
   keymap {
     compatible = "zmk,keymap";
@@ -105,7 +121,7 @@
       bindings = <
         &none &kp GRAVE &kp LC(N2)  &kp LC(N3)  &kp LC(N4)  &kp LC(N5)  &kp LC(N6)   &kp LC(N7) &kp LC(N8)    &kp LC(N9)  &kp ESC &none
         &none &kp TAB &kp LALT  &kp LCMD  &kp LCTRL  &kp LG(N5)  &kp LEFT &kp DOWN &kp UP  &kp RIGHT  &kp LG(N0)    &none
-        &none &kp LSHIFT  &none    &kp C    &bt BT_SEL 0   &bt BT_SEL 1   &to 6   &kp C_MUTE &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp LSHIFT  &none
+        &none &kp LSHIFT  &none    &kp C    &bt BT_SEL 0   &bt BT_SEL 1   &l6_toggle   &kp C_MUTE &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp LSHIFT  &none
                                     &kp CAPS  &mo L3     &mo L1      &kp SPACE &mo L4       &sl L3
       >;
     };
