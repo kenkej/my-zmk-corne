@@ -2,6 +2,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/ext_power.h>
+
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 #include <dt-bindings/zmk/pointing.h>
@@ -19,13 +22,29 @@
 #define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41
 
 / { 
+  macros {
+        batt_check: batt_check {
+            label = "BATT_CHECK";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&out OUT_BLE &out OUT_USB>;
+        };
+    };
+
   behaviors {
-     soft_off_both: soft_off_both {
-       compatible = "zmk,behavior-soft-off";
-       #binding-cells = <0>;
-       hold-time-ms = <3000>;
-     };
-        
+      battery_status: battery_status {
+              compatible = "zmk,behavior-sensor-rotate";
+              label = "BATTERY_STATUS";
+              #sensor-binding-cells = <0>;
+              bindings = <&batt_check>;
+      };
+
+      soft_off_both: soft_off_both {
+        compatible = "zmk,behavior-soft-off";
+        #binding-cells = <0>;
+        hold-time-ms = <3000>;
+      };
+          
     lt_ss: layer_tap_sticky_shift {
       compatible = "zmk,behavior-hold-tap";
       label = "LAYER_TAP_STICKY_SHIFT";
@@ -68,6 +87,15 @@
         hold-trigger-on-release;
     };
   };
+
+    combos {
+        compatible = "zmk,combos";
+        combo_batt {
+            timeout-ms = <50>;
+            key-positions = <0 5>;  // Top left and right keys
+            bindings = <&battery_status>;
+        };
+    };
 
   keymap {
     compatible = "zmk,keymap";
