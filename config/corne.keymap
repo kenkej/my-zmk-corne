@@ -20,56 +20,6 @@
 #define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41
 
 / { 
-  behaviors {
-     soft_off_both: soft_off_both {
-       compatible = "zmk,behavior-soft-off";
-       #binding-cells = <0>;
-       hold-time-ms = <3000>;
-     };
-        
-    lt_ss: layer_tap_sticky_shift {
-      compatible = "zmk,behavior-hold-tap";
-      label = "LAYER_TAP_STICKY_SHIFT";
-      #binding-cells = <2>;
-      tapping-term-ms = <200>;
-      quick-tap-ms = <0>;
-      flavor = "hold-preferred";
-      bindings = <&mo>, <&sk>;
-    };
-
-    /**
-     * Left hand positional hold tap, used for home block modifiers
-     */
-    lhr: left_hand_positional_hold_tap {
-        compatible = "zmk,behavior-hold-tap";
-        label = "LEFT_POSITIONAL_HOLD_TAP";
-        #binding-cells = <2>;
-        flavor = "balanced";
-        tapping-term-ms = <300>;
-        quick-tap-ms = <200>;
-        global-quick-tap;
-        bindings = <&kp>, <&kp>;
-        hold-trigger-key-positions = <KEYS_R>;
-        hold-trigger-on-release;
-    };
-
-    /**
-     * Right hand positional hold tap, used for home block modifiers
-     */
-    rhr: right_hand_positional_hold_tap {
-        compatible = "zmk,behavior-hold-tap";
-        label = "RIGHT_POSITIONAL_HOLD_TAP";
-        #binding-cells = <2>;
-        flavor = "balanced";
-        tapping-term-ms = <300>;
-        quick-tap-ms = <200>;
-        global-quick-tap;
-        bindings = <&kp>, <&kp>;
-        hold-trigger-key-positions = <KEYS_L>;
-        hold-trigger-on-release;
-    };
-  };
-
   keymap {
     compatible = "zmk,keymap";
 
@@ -82,7 +32,7 @@
         &none &kp Q     &kp W       &kp E       &kp R        &kp T       &kp Y      &kp U        &kp I       &kp O       &kp P     &none
         &none &kp A     &kp S       &kp D       &kp F        &kp G       &kp H      &kp J        &kp K       &kp L       &lt L5 RET   &none
         &none &kp Z     &kp X       &kp C       &kp V        &kp B       &kp N      &kp M        &kp COMMA   &kp DOT     &kp FSLH  &none
-                                    &kp CAPS    &mo L3       &lt_ss L1 LSHIFT  &lt L2 SPACE &mo L4  &kp LSHIFT
+                                    &kp CAPS    &mo L3       &mo L1      &lt L2 SPACE &mo L4  &kp LSHIFT
       >;
     };
 
